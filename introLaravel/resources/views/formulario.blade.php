@@ -10,23 +10,25 @@
 
 
           <div class="card-body">
-              <form action="">
+              <form action="/enviar" method="POST">
+                <!-- llave de paso para envios por post -->
+                @csrf
 
               <div class="mb-3">
                   <label for="nombre" class="form-label">Nombre:</label>
-                  <input type="text" class="form-control" id="" >
+                  <input type="text" class="form-control" name="txtnombre" >
               </div>
               <div class="mb-3">
-                  <label for="Apellido" class="form-label">Apellido:</label>
-                  <input type="text" class="form-control" id="" >
+                  <label for="apellido" class="form-label">Apellido:</label>
+                  <input type="text" class="form-control" name="txtapellido" >
               </div>
               <div class="mb-3">
                   <label for="correo" class="form-label">Correo:</label>
-                  <input type="mail" class="form-control" id="" >
+                  <input type="mail" class="form-control" name="txtcorreo" >
               </div>
               <div class="mb-3">
-                  <label for="Telefono" class="form-label">Telefono:</label>
-                  <input type="number" class="form-control" id="" >
+                  <label for="telefono" class="form-label">Telefono:</label>
+                  <input type="number" class="form-control" name="txttelefono" >
               </div>
           </div>
 
