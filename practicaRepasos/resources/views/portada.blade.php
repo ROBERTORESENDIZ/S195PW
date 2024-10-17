@@ -43,7 +43,12 @@
                 <h4>S195</h4>
             </div>
 
-            
+            <!-- div para colocar bontones de los repasos -->
+            <div class="divbotones text-center col-5">
+                <div class="btn">
+                    <a type="button" class="btn btn-primary" href="{{route('REPASO1')}}">REPASO 1</a>
+                </div>
+            </div>
         </div>
     </div>
 </body>
