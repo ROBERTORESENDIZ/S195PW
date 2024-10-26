@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\validadorCliente;
 
 class controladorVistas extends Controller
 {
@@ -21,20 +22,40 @@ class controladorVistas extends Controller
         return view('cliente');
     }
 
-    public function procesarCliente(Request $peticion)
+    public function procesarCliente(validadorCliente $peticion)
     {
-        //return "Llego tu formulario al controlador";
+        //VALIDACION POR PARTE DEL CONTROLADOR 
+        
+        // $validacion= $peticion->validate([
+        //     'txtnombre'=>'required,
+        //     'txtapellido'=>'required',
+        //     'txtcorreo'=>'required',
+        //     'txttelefono'=>'required,
+        // ]);
 
-        //Imprime todo lo que viene en la peticion
-        //return $peticion->all();
 
-        //Devuelve la ruta de la peticion
-        //return $peticion->path();
 
-        //Devuelve la url completa de la peticion
-        //return $peticion->url();
 
-        //Muestra la ip origen de la peticion
-        return $peticion->ip();
+        //redirecion con mensaje en sesion 
+        $usuario = $peticion->input('txtnombre');
+        session()->flash('exito','Se guardo el usuario: '.$usuario);
+        
+        return to_route('rutaformulario');
+
+        // Redireccionando usando la ruta
+        //return redirect('/');
+
+        // Redireccionando usando el apodo
+        //return redirect()->route('rutaclientes');
+
+        // Redireccionando al origen de la peticion
+        //return back();
+
+        //redireccion con valores de retorno (compact es más seguro)
+        // $id = [['usuario'=>1],['usuario'=>2]];
+        // return view('formulario', compact("id"));
+
+
+
     }
 }
