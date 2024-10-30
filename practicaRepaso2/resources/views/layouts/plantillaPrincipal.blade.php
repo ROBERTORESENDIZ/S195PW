@@ -35,7 +35,7 @@
 
       <ul class="nav nav-underline me-5  ">
             <li class="nav-item">
-                <a class="nav-link {{ request()->routeIs('rutaregistrarlibro')?'active':'text-dark' }}" aria-current="page" href="{{route('rutaregistrarlibro')}}">Registrar libro</a>
+                <a class="nav-link {{ request()->routeIs('rutaregistrarlibro')?'active':'text-dark' }}" aria-current="page" href="{{route('rutaregistrarlibro')}}">{{__('Registro de libros')}}</a>
             </li>
         </ul>
     </header>

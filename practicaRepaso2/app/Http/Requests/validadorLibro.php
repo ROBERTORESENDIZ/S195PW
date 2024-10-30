@@ -25,7 +25,7 @@ class validadorLibro extends FormRequest
             'isbn'=>'required | numeric | min_digits:13',
             'titulo'=>'required | max:150',
             'autor'=>'required',
-            'paginas'=>'required | numeric | min:1',
+            'paginas'=>'required | numeric | min:1 | integer',
             'año'=>'required | numeric | min_digits:4| max_digits:4 |between:1000,2024',
             'editorial'=>'required',
             'email-editorial'=>'required |email:rfc,dns',

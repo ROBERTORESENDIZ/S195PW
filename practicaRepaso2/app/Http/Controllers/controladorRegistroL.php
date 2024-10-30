@@ -14,7 +14,7 @@ class controladorRegistroL extends Controller
 
     public function guardadLibro (validadorLibro $registro){
         $libro = $registro->input('titulo');
-        session()->flash('confirmacion','Todo correcto: Libro '. $libro.' Guardado correctamente');
+        session()->flash('confirmacion', $libro);
         
         return to_route('rutaregistrarlibro');
     }
