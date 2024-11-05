@@ -29,7 +29,6 @@ class validadorLibro extends FormRequest
             'año'=>'required | numeric | min_digits:4| max_digits:4 |between:1000,2024',
             'editorial'=>'required',
             'email-editorial'=>'required |email:rfc,dns',
-
         ];
     }
 }
