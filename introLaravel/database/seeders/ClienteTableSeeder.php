@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\BD;
+use Illuminate\Support\Facades\DB;
 
 class ClienteTableSeeder extends Seeder
 {
@@ -31,6 +31,7 @@ class ClienteTableSeeder extends Seeder
                 'apellido'=>'Perez',
                 'Correo'=>'perezj@gmail.com',
                 'telefono'=>'23456784373'
-            ]]);
+            ]
+        ]);
     }
 }
