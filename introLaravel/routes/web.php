@@ -37,3 +37,8 @@ Route::get('/', [clienteController::class,'home'])->name('rutainicio');
 Route::get('/cliente/create', [clienteController::class,'create'])->name('rutaformulario');
 Route::post('/ciente',[clienteController::class,'store'])->name('procesar');
 Route::get('/cliente', [clienteController::class,'index'])->name('rutaclientes');
+
+// Actualizar cliente
+Route::post('/cienteActualizar/{id}',[clienteController::class,'update'])->name('actualizar');
+// Eliminar cliente
+Route::post('/cienteEliminar/{id}/{nombre}',[clienteController::class,'destroy'])->name('eliminar');
