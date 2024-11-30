@@ -19,10 +19,10 @@
           <ul class="navbar-nav">
 
             <li class="nav-item">
-              <a class="nav-link {{ request()->routeIs('rutaformulario')?'text-warning':'' }}" aria-current="page" href="{{route('rutaformulario')}}">{{__('Registro de clientes')}}</a>
+              <a class="nav-link {{ request()->routeIs('cliente.create')?'text-warning':'' }}" aria-current="page" href="{{route('cliente.create')}}">{{__('Registro de clientes')}}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link {{ request()->routeIs('rutaclientes')?'text-warning':'' }}" href="{{route('rutaclientes')}}"> {{__('Consultar clientes')}} </a>
+              <a class="nav-link {{ request()->routeIs('cliente.index')?'text-warning':'' }}" href="{{route('cliente.index')}}"> {{__('Consultar clientes')}} </a>
             </li>
           </ul>
           

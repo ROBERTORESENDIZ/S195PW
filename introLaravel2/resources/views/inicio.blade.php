@@ -12,7 +12,7 @@
         <div class='ctG'>
                 <h1>Bienvenido querido turista!</h1>
                 <h6 >Presiona el boton para iniciar..</h6>
-                <a href="{{route('rutaformulario')}}" class="btn btn-primary">Comencemos!</a>
+                <a href="{{route('cliente.create')}}" class="btn btn-primary">Comencemos!</a>
 
 
         </div>

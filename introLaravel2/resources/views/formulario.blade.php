@@ -24,7 +24,7 @@
 
 
           <div class="card-body">
-              <form action="{}" method="">
+              <form action="{{route('cliente.store')}}" method="POST">
                 <!-- llave de paso para envios por post -->
                 @csrf
 
